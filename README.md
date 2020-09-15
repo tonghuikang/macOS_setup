@@ -39,6 +39,10 @@
 - Keyboard (fast key repeat)
 - Finder (Favourites - home folder, Desktop, Downloads, relevant repositories)
 - Trackpad - Uncheck "Swipe between pages"
+- Accessibility 
+
+  - Zoom (not the app) > Use scroll gesture (Command) > Advanced > Appearance > Continuously with pointer
+  - Pointer Control > Trackpad Options > Enable dragging (three finger drag)
 
 #### Apps to download in your computer
 
@@ -46,13 +50,15 @@
 - Telegram (if not already downloaded)
 - Typora
 - Zoom
+- Logitech Options (I own a MX Anywhere 2S)
+- Logitech Presentation (I own a Spotlight)
 - Visual Studio Code
 - PyCharm
 
 #### Allow screen recording for certain apps
 
 - (This is so that you have less panic when you really need to screen record with those apps)
-- Relevant apps: Google Chrome, Zoom, QuickTime Player
+- Relevant apps: Google Chrome, Zoom, QuickTime Player, Logitech Presentation
 - Attempt to record screen with the app. Then go to Security & Privacy > Privacy > Screen Recording > Enable
 
 
