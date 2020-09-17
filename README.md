@@ -36,7 +36,9 @@
 - Dock preferences (delete everything else, do not show recent applications in Dock)
 - Clock (24-hour, show seconds)
 - Keep computer awake unless locked (energy saver, screensaver)
-- Keyboard (fast key repeat)
+- Keyboard 
+  - Key Repeat (Fast), Delay Until Repeat (Short)
+  - Customise Control Strip - Remove Siri
 - Finder (Favourites - home folder, Desktop, Downloads, relevant repositories)
 - Trackpad - Uncheck "Swipe between pages"
 - Accessibility 
