@@ -50,12 +50,13 @@
 
 - Chrome (if not already downloaded)
 - Telegram (if not already downloaded)
-- Typora
-- Zoom
+- Typora (save images to `./assets`, enable math processing)
+- Zoom (download virtual background)
 - Logitech Options (I own a MX Anywhere 2S)
 - Logitech Presentation (I own a Spotlight)
 - Visual Studio Code
 - PyCharm
+- Dropbox (log in and sync)
 
 #### Allow screen recording for certain apps
 
@@ -93,6 +94,12 @@
 # sudo chown -R tonghuikang ~/
 ```
 - For installation for individual environments please refer to python.md
+
+
+
+## Issues
+
+Email app keep popping up on disconnection (reference tbc)
 
 
 
