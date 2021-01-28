@@ -27,6 +27,7 @@ alias sha1='openssl sha1'
 
 # conda and jupyter notebook
 alias jn="jupyter notebook"
+alias jnc="jupyter nbconvert --to script *.ipynb"
 alias clist="conda info --envs"
 alias ss="source /usr/local/anaconda3/etc/profile.d/conda.sh"
 alias sa="conda activate"
@@ -91,6 +92,9 @@ pwdd() {
 # python with tracing
 alias pyt="python -m trace --ignore-dir=\$(python -c 'import sys ; print(\":\".join(sys.path)[1:])')\":\$HOME/lib64:\$HOME/lib:/usr\" --ignore-module=\"common_validation,parse_utils,plot_utils\" -t "
 
+# competitive programming, require location with scripts
+alias cx="./run_cpp.sh"
+alias px="./run_py.sh"
 
 #############
 ### PATHS ###

@@ -39,6 +39,7 @@
 - Keyboard 
   - Key Repeat (Fast), Delay Until Repeat (Short)
   - Customise Control Strip - Remove Siri
+  - Text - uncheck "Add full step with double-space", "Use smart quotes"
 - Finder (Favourites - home folder, Desktop, Downloads, relevant repositories)
 - Trackpad - Uncheck "Swipe between pages"
 - Accessibility 
