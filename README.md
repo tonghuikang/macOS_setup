@@ -39,30 +39,29 @@
 - Keyboard 
   - Key Repeat (Fast), Delay Until Repeat (Short)
   - Customise Control Strip - Remove Siri
-  - Text - uncheck "Add full step with double-space", "Use smart quotes"
+  - Text - uncheck "Add full stop with double-space", "Use smart quotes"
+  - Modifer keys - Caps lock to Escape
+    - If you want to swap - install Karabinder Elements
 - Finder (Favourites - home folder, Desktop, Downloads, relevant repositories)
 - Trackpad - Uncheck "Swipe between pages"
-- Accessibility 
-
+- Accessibility
   - Zoom (not the app) > Use scroll gesture (Command) > Advanced > Appearance > Continuously with pointer
   - Pointer Control > Trackpad Options > Enable dragging (three finger drag)
 
 #### Apps to download in your computer
 
-- Chrome (if not already downloaded)
+- Chrome (if not already downloaded) (stop asking to save password, use LastPass)
 - Telegram (if not already downloaded)
 - Typora (save images to `./assets`, enable math processing)
 - Zoom (download virtual background)
 - Logitech Options (I own a MX Anywhere 2S)
-- Logitech Presentation (I own a Spotlight)
-- Visual Studio Code
-- PyCharm
+- VS Code
 - Dropbox (log in and sync)
 
 #### Allow screen recording for certain apps
 
 - (This is so that you have less panic when you really need to screen record with those apps)
-- Relevant apps: Google Chrome, Zoom, QuickTime Player, Logitech Presentation
+- Relevant apps: Google Chrome, Zoom, Slack, QuickTime Player
 - Attempt to record screen with the app. Then go to Security & Privacy > Privacy > Screen Recording > Enable
 
 
@@ -72,7 +71,7 @@
 #### iTerm2 setup
 
 - https://medium.com/ayuth/iterm2-zsh-oh-my-zsh-the-most-power-full-of-terminal-on-macos-bdb2823fb04c
-- Set up your **aliases** - following is mine [.zshrc](./zshrc)
+- Set up your **aliases** - following is mine [.zshrc](./.zshrc)
 
 #### Applications to install with brew
 
@@ -108,7 +107,8 @@ Email app keep popping up on disconnection (reference tbc)
 
 #### How to fix your computer
 
-- reset NVRAM or PRAM https://support.apple.com/en-us/HT204063
-- reset the SMC https://support.apple.com/en-sg/HT201295
+- (no longer required for M1 laptops)
+  - reset NVRAM or PRAM https://support.apple.com/en-us/HT204063
+  - reset the SMC https://support.apple.com/en-sg/HT201295
 - run diagnostics https://support.apple.com/en-sg/HT202731
 - reset the computer if all else fails https://support.apple.com/en-gb/HT208496
