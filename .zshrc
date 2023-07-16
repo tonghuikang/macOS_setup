@@ -7,7 +7,6 @@ source $ZSH/oh-my-zsh.sh
 # loaded plugins
 plugins=(
   git
-  docker
 )
 
 ###############
@@ -35,11 +34,11 @@ alias sd="conda deactivate"
 
 # easier file removal
 alias rmtmp="rm -rf /tmp/*"
-rmdl() { 
-  mkdir -p ~/tmp1; mkdir -p ~/tmp2; mkdir ~/Downloads/before-dummy-folder; touch ~/Downloads/dummy-file; 
-  mv ~/Downloads/before-* ~/tmp1/; mv ~/Downloads/* ~/tmp2; rm ~/tmp2/dummy-file; 
-  mv ~/tmp2 ~/Downloads/before-$(date "+%y-%m-%d_%H-%M-%S"); mv ~/tmp1/* ~/Downloads/; 
-  rmdir ~/tmp1 && rmdir ~/Downloads/before-dummy-folder; 
+rmdl() {
+  mkdir -p ~/tmp1; mkdir -p ~/tmp2; mkdir ~/Downloads/before-dummy-folder; touch ~/Downloads/dummy-file;
+  mv ~/Downloads/before-* ~/tmp1/; mv ~/Downloads/* ~/tmp2; rm ~/tmp2/dummy-file;
+  mv ~/tmp2 ~/Downloads/before-$(date "+%y-%m-%d_%H-%M-%S"); mv ~/tmp1/* ~/Downloads/;
+  rmdir ~/tmp1 && rmdir ~/Downloads/before-dummy-folder;
 }
 
 # file count
@@ -63,6 +62,8 @@ alias gc="git commit -m "
 alias ghj="git add . && git status && git commit -m 'no comment'"
 alias ghjk="git add . && git status && git commit -m "auto" && git push heroku master"
 alias ggwp="git pull && git status && git add . && git commit -m 'dump' && git push"
+alias gcm="git checkout master"
+alias ggc="git add . && git commit -m dump"
 
 # cd shortcuts
 alias cd..='cd ..'
@@ -83,10 +84,10 @@ alias p="python"
 alias hg="history | grep"
 
 # pwd of a file
-pwdd() { 
+pwdd() {
   old=`pwd`;new=$(dirname "$1");
-  if [ "$new" != "." ]; 
-    then cd $new; fi;file=`pwd`/$(basename "$1"); cd $old; echo $file; 
+  if [ "$new" != "." ];
+    then cd $new; fi;file=`pwd`/$(basename "$1"); cd $old; echo $file;
 }
 
 # python with tracing
@@ -95,13 +96,18 @@ alias pyt="python -m trace --ignore-dir=\$(python -c 'import sys ; print(\":\".j
 # competitive programming, require location with scripts
 alias cx="./run_cpp.sh"
 alias px="./run_py.sh"
+pxa() { autoflake --in-place --remove-all-unused-imports "$1".py }
+alias gg="git add . && git commit -m "dump""
+
+alias gen="python3 sample_gen.py"
+alias cfgen="python3 sample_crawl_cf.py"
 
 #############
 ### PATHS ###
 #############
 
 # from wget
-export PATH="/usr/local/opt/openssl/bin:$PATH"
+export PATH=/usr/local/Cellar/pypy3.9-v7.3.12-macos_arm64/bin:$PATH
 export LDFLAGS="-L/usr/local/opt/openssl/lib"
 export CPPFLAGS="-I/usr/local/opt/openssl/include"
 
@@ -116,4 +122,40 @@ export LDFLAGS="-L/usr/local/opt/gettext/lib"
 export CPPFLAGS="-I/usr/local/opt/gettext/include"
 
 # activate conda environment
-source /usr/local/anaconda3/etc/profile.d/conda.sh
+#source /usr/local/anaconda3/etc/profile.d/conda.sh
+
+# ssh
+alias dev="sft ssh devsharedcpp2"
+alias q='sft login && ssh -t devbox "tmux a"'
+alias q2='ssh -t 34.67.99.38 "tmux a"'
+
+alias t="touch"
+
+export PATH=/usr/local/Cellar/pypy3.9-v7.3.12-macos_arm64/bin:$PATH
+export PATH=/Users/htong/Library/Python/3.8/bin:$PATH
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+#__conda_setup="$('/usr/local/Caskroom/miniforge/base/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+#if [ $? -eq 0 ]; then
+#    eval "$__conda_setup"
+#else
+#    if [ -f "/usr/local/Caskroom/miniforge/base/etc/profile.d/conda.sh" ]; then
+#        . "/usr/local/Caskroom/miniforge/base/etc/profile.d/conda.sh"
+#    else
+#        export PATH="/usr/local/Caskroom/miniforge/base/bin:$PATH"
+#    fi
+#fi
+#unset __conda_setup
+# <<< conda initialize <<<
+
+
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+
+alias ppd="pip install . && python -m fastapi_poe"
+alias ppc="pre-commit run --all"
+alias pph="ngrok http 8080"
