@@ -45,7 +45,9 @@
 
 #### Apps to download in your computer
 
-- Chrome (if not already downloaded) (stop asking to save password, use LastPass)
+- Chrome (if not already downloaded)
+  - Stop asking to save password, use LastPass
+  - Add LastPass extension 
 - Zoom
 - Logitech Options (if you own Logitech devices)
 - VSCode
