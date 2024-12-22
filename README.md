@@ -23,26 +23,21 @@
 - Create an iCloud account, remember the username and password
 - If you cannot create iCloud account, try doing that in the App Store
 - Please restart the computer to ensure that your password still works
-
 - Enable Find My Mac
-
-  
 
 ## Application setup
 
 #### Personal preferences
 
-- Hot corners (mission control, desktop, launchpad, sleep)
-- Dock preferences (delete everything else, do not show recent applications in Dock)
-- Clock (24-hour, show seconds)
-- Keep computer awake unless locked (energy saver, screensaver)
+- Hot Corners (Mission Control, Desktop, Launchpad, Put Display to Sleep)
+- Dock Settings (Disable "Show suggested and recent apps in Dock")
+- Date & Time (24-hour, Display the time with seconds in the menu bar)
 - Keyboard 
   - Key Repeat (Fast), Delay Until Repeat (Short)
-  - Customise Control Strip - Remove Siri
-  - Text - uncheck "Add full stop with double-space", "Use smart quotes"
+  - Text Input - Input Sources - Edit - uncheck "Add full stop with double-space", "Use smart quotes"
   - Modifer keys - Caps lock to Escape
-    - If you want to swap - install Karabinder Elements
-- Finder (Favourites - home folder, Desktop, Downloads, relevant repositories)
+    - (if your keyboard is broken - install Karabinder Elements)
+- Finder - Favourites - add home folder
 - Trackpad - Uncheck "Swipe between pages"
 - Accessibility
   - Zoom (not the app) > Use scroll gesture (Command) > Advanced > Appearance > Continuously with pointer
@@ -51,20 +46,15 @@
 #### Apps to download in your computer
 
 - Chrome (if not already downloaded) (stop asking to save password, use LastPass)
-- Telegram (if not already downloaded)
-- Typora (save images to `./assets`, enable math processing)
-- Zoom (download virtual background)
-- Logitech Options (I own a MX Anywhere 2S)
-- VS Code
-- Dropbox (log in and sync)
+- Zoom
+- Logitech Options (if you own Logitech devices)
+- VSCode
 
 #### Allow screen recording for certain apps
 
 - (This is so that you have less panic when you really need to screen record with those apps)
 - Relevant apps: Google Chrome, Zoom, Slack, QuickTime Player
 - Attempt to record screen with the app. Then go to Security & Privacy > Privacy > Screen Recording > Enable
-
-
 
 ## Development setup
 
@@ -77,31 +67,15 @@
 
 - (brew should be already installed together with zsh)
 - `brew install git wget htop`
-- `brew cask install smcfancontrol`
+- `brew cask install smcfancontrol` (if you want to manage the computer uptime on the fan speed level)
 
 #### Java installation
 
 - (tbc)
 
-#### Anaconda installation
-
-- `brew cask install anaconda`
-- `echo 'export PATH="/usr/local/anaconda3/bin:$PATH"' >> ~/.zshrc`
-
-```bash
-# if there are permission issues
-# sudo chown -R tonghuikang /usr/local/anaconda3
-# sudo chown -R tonghuikang ~/
-```
-- For installation for individual environments please refer to python.md
-
-
-
 ## Issues
 
-Email app keep popping up on disconnection (reference tbc)
-
-
+- (tbc)
 
 ## Miscellaneous
 
