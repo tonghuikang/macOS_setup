@@ -16,7 +16,6 @@
 
 - (You should install these apps first to make installing easier)
 - Google Chrome (the web browser you will be using anyway)
-- Telegram (for me to send notes to myself)
 
 #### iCloud
 
@@ -42,12 +41,27 @@
 - Accessibility
   - Zoom (not the app) > Use scroll gesture (Command) > Advanced > Appearance > Continuously with pointer
   - Pointer Control > Trackpad Options > Enable dragging (three finger drag)
+- Dark mode - Appearance - Dark
+
+```bash
+# show hidden files
+defaults write com.apple.finder AppleShowAllFiles YES
+
+# add pathbar to title
+defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
+
+# restart finder
+killall Finder;
+```
 
 #### Apps to download in your computer
 
 - Chrome (if not already downloaded)
   - Stop asking to save password, use LastPass
-  - Add LastPass extension 
+  - Extensions
+    - [Lastpass](https://chromewebstore.google.com/detail/lastpass-free-password-ma/hdokiejnpimakedhajhdlcegeplioahd)
+    - [Competitive Companion](https://chromewebstore.google.com/detail/competitive-companion/cjnmckjndlpiamhfimnnjmnckgghkjbl) (for competitive programming)
+    - Self-served [Jupyter Cell Filler extension](https://github.com/tonghuikang/jupyter-autocomplete)
 - Zoom
 - Logitech Options (if you own Logitech devices)
 - VSCode
@@ -58,33 +72,66 @@
 - Relevant apps: Google Chrome, Zoom, Slack, QuickTime Player
 - Attempt to record screen with the app. Then go to Security & Privacy > Privacy > Screen Recording > Enable
 
+
 ## Development setup
 
-#### iTerm2 setup
+```
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-- https://medium.com/ayuth/iterm2-zsh-oh-my-zsh-the-most-power-full-of-terminal-on-macos-bdb2823fb04c
-- Set up your **aliases** - following is mine [.zshrc](./.zshrc)
+echo >> /Users/htong/.zprofile
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/htong/.zprofile
+eval "$(/opt/homebrew/bin/brew shellenv)"
+```
 
-#### Applications to install with brew
+```
+brew install --cask iterm2
+brew install zsh
+```
 
-- (brew should be already installed together with zsh)
-- `brew install git wget htop`
-- `brew cask install smcfancontrol` (if you want to manage the computer uptime on the fan speed level)
+Set up `~/.zshrc` - this is mine [.zshrc](./.zshrc)
 
-#### Java installation
+```
+brew install wget htop
+```
 
-- (tbc)
+```
+ssh-keygen -t ed25519 -C "your_email@example.com"
 
-## Issues
+eval "$(ssh-agent -s)"
+touch ~/.ssh/config
+open ~/.ssh/config
 
-- (tbc)
+# add to config
+Host github.com
+  AddKeysToAgent yes
+  UseKeychain yes
+  IdentityFile ~/.ssh/id_ed25519
+
+pbcopy < ~/.ssh/id_ed25519.pub
+# https://github.com/settings/keys
+```
+
+```
+brew install --cask obsidian
+brew install --cask spotify
+brew install --cask rectangle
+```
+
+Java installation tbc
+
+Python package manager installation tbc
+
 
 ## Miscellaneous
 
 #### How to fix your computer
 
-- (no longer required for M1 laptops)
+- (no longer required for M* laptops)
   - reset NVRAM or PRAM https://support.apple.com/en-us/HT204063
   - reset the SMC https://support.apple.com/en-sg/HT201295
 - run diagnostics https://support.apple.com/en-sg/HT202731
 - reset the computer if all else fails https://support.apple.com/en-gb/HT208496
+
+#### References
+
+- https://eugeneyan.com/writing/mac-setup/
